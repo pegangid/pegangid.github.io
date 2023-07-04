@@ -1,0 +1,35 @@
+@import url(style.css);
+
+/* Style Education Section */
+
+.education-container {
+    padding: 3.8rem 1rem;
+}
+
+.education-container .education-wrapper {
+    display: flex;
+}
+
+.education-container .education-wrapper .education-sidebar {
+    position: fixed;
+    top: 3.8rem;
+    left: 0;
+    bottom: 0;
+    padding: 0.5rem 1rem;
+    width: 15rem;
+    height: 100vh;
+}
+
+.education-container .education-wrapper .education-sidebar .education-sidebar-header .title {
+    color: var(--black-color);
+    font-family: var(--font-poppins);
+    font-size: 1.25rem;
+    font-weight: var(--fw-semibold);
+}
+
+.education-container .education-wrapper .education-content {
+    position: absolute;
+    left: 15rem;
+    width: calc(100% - 15rem);
+    padding: 0.5rem 1rem;
+}
