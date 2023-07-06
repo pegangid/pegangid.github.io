@@ -109,7 +109,7 @@
     line-height: 1.2;
     color: var(--black-color);
     font-family: var(--font-poppins);
-    font-size: 1.3rem;
+    font-size: 1.3rem !important;
     font-weight: var(--fw-bold);
 }
 
@@ -138,28 +138,77 @@
 
 
 
-/* Scroll Section */
+/* Media Queries */
 
-.scroll-top-container {
-    position: fixed;
-    right: 1rem;
-    bottom: -100%;
-    box-shadow: var(--box-shadow);
-    transition: 0.3s;
+@media screen and (max-width: 890px) {
+    .news-container .news-body .news-body-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news-container .news-body .news-body-container .news-card-container:nth-child(1) {
+        grid-area: 1 / 1 / 3 / 1;
+    }
+    
+    .news-container .news-body .news-body-container .news-card-container:nth-child(2) {
+        grid-area: 1 / 2 / 1 / 3;
+    }
+    
+    .news-container .news-body .news-body-container .news-card-container:nth-child(3) {
+        grid-area: 3 / 1 / 4 / 1;
+    }
+    
+    .news-container .news-body .news-body-container .news-card-container:nth-child(4) {
+        grid-area: 2 / 2 / 4 / 3;
+    }
 }
 
-.scroll-top-container.show {
-    bottom: 1rem;
-}
+@media screen and (max-width: 450px) {
+    .news-container .news-body .news-body-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
-.scroll-top-container .scroll-button {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-}
+    .news-container .news-body .news-body-container .news-card-container:nth-child(1) {
+        grid-area: 1 / 1 / 2 / 1;
+    }
+    
+    .news-container .news-body .news-body-container .news-card-container:nth-child(2) {
+        grid-area: 2 / 1 / 3 / 1;
+    }
+    
+    .news-container .news-body .news-body-container .news-card-container:nth-child(3) {
+        grid-area: 3 / 1 / 4 / 1;
+    }
+    
+    .news-container .news-body .news-body-container .news-card-container:nth-child(4) {
+        grid-area: 4 / 1 / 5 / 1;
+    }
 
-.scroll-top-container .scroll-button .icon {
-    color: var(--white-color);
-    font-size: 1.2rem;
+    .news-container .news-body .news-body-container .news-card-container:nth-child(1) .news-card-content .title {
+        font-size: 0.9rem;
+    }
+
+    .news-container .news-body .news-body-container .news-card-container .news-card-content .title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 0.9rem;
+        overflow: hidden;
+    }
+
+    .news-container .news-body .news-body-content .news-card {
+        display: block;
+    }
+
+    .news-container .news-body .news-body-content .news-card .news-image-container {
+        margin-bottom: 0.7rem;
+    }
+
+    .news-container .news-body .news-body-content .news-card .news-image-container .news-image {
+        width: 100%;
+    }
+
+    .news-container .news-body .news-body-content .news-card .news-content .title {
+        width: 100%;
+        font-size: 1.1rem !important;
+    }
 }
