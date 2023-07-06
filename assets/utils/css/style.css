@@ -239,12 +239,8 @@ button {
 
 /* Media Queries */
 
-@media only screen and (max-width: 450px) {
-    .navbar-container .navbar-content .navbar-content-right {
-        display: none;
-    }
-
-    .footer-container {
+@media only screen and (max-width: 560px) {
+    .navbar-container .navbar-content .navbar-content-right .navbar-list {
         display: none;
     }
 
@@ -294,5 +290,15 @@ button {
 
     .mobile-menu-container .mobile-menu-list .mobile-menu-item .mobile-menu-link.active .link {
         color: var(--primary-color);
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .navbar-container .navbar-content .navbar-content-right {
+        display: none;
+    }
+
+    .footer-container {
+        display: none;
     }
 }

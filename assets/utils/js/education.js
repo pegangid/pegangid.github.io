@@ -19,15 +19,24 @@ function navHighlighter() {
     });
 }
 
-console.log(document.querySelector(".education-sidebar-body .education-list .education-item a"))
-
 
 
 const menuToggleButtonEl = document.getElementById("menu-toggle");
 const educationSidebarEl = document.getElementById("education-sidebar");
 
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 0) {
+        educationSidebarEl.classList.remove("show", );
+        menuToggleButtonEl.checked = false;
+    }
+});
+
 menuToggleButtonEl.addEventListener("click", () => {
     educationSidebarEl.classList.toggle("show");
+
+    if(window.scrollY > 0) {
+        educationSidebarEl.style.top = `${ window.scrollY }px`;
+    }
 
     const section = document.querySelectorAll("div[id]");
 

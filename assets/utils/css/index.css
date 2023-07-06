@@ -314,6 +314,8 @@
 .chart-container .chart-content .pie-chart-container {
     width: 50%;
     height: 27rem;
+    display: flex;
+    justify-content: center;
 }
 
 .chart-container .chart-content .bar-chart-container {
